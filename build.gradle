@@ -5,17 +5,19 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.1.RELEASE")
-        classpath('gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.13.0')
+        //classpath('gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.13.0')
     }
 }
  
 group = 'cheolu'
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+/*
 apply plugin: 'com.palantir.docker'
 
 docker {
@@ -23,8 +25,8 @@ docker {
     files jar.archivePath
     buildArgs(['JAR_FILE': "${jar.archiveName}"])
 }
-
-bootJar {
+*/
+bootWar {
     baseName = 'mmm2'
 }
 
@@ -38,5 +40,8 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+    //compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+    //compile("javax.servlet:jstl:1.2")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
