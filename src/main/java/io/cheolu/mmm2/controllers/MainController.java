@@ -8,7 +8,6 @@ public class MainController {
 	
     @RequestMapping("/")
     public String home() {
-    	System.out.println("view..");
         return "main";
     }
 }

@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>This is the main of MMM2!</h2>
+	<h2>This is the main of MMM2!~</h2>
 </body>
 </html>
