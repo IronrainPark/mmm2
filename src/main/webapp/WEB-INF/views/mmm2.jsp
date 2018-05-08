@@ -5,17 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	$("#join").click(function(){
-		window.location.href = "/in";
-	});
-});
-</script>
 </head>
 <body>
-	<h1>This is the main of MMM2!~</h1>
-	<h4 id="join">Join</h4>
+	INSIDE
 </body>
 </html>
